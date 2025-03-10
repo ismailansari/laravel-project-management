@@ -4,6 +4,7 @@
 <ul>
     <li>Open terminal and run the following commands:
         <ul>
+            <li>Requires the `php version 8.2 or higher` and `composer` installed</li>
             <li>clone the repo from the given link</li>
             <li>composer install / composer update</li>
             <li>cp .env.example .env and update the `DB` variables</li>
