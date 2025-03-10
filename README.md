@@ -34,8 +34,4 @@ Plan was to add Permissions and Roles to restrict the routes access but due to t
     <li>API Documentation using `Postman`</li>
 </ul>
 
-Sample APIS:
-
-![Screenshot from 2025-03-10 03-42-59.png](..%2F..%2F..%2F..%2Fhome%2Fismail%2FPictures%2FScreenshots%2FScreenshot%20from%202025-03-10%2003-42-59.png)
-
-![Screenshot from 2025-03-10 05-26-53.png](..%2F..%2F..%2F..%2Fhome%2Fismail%2FPictures%2FScreenshots%2FScreenshot%20from%202025-03-10%2005-26-53.png)
+<h5>Sample APIS Request / Response - See the `postman` directory</h5>
