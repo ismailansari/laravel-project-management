@@ -1,0 +1,719 @@
+{
+	"info": {
+		"_postman_id": "c6e2eab6-be1d-4173-860d-abfc13ee44dc",
+		"name": "Laravel-Project-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "7882845"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User - Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Abdul\",\n    \"last_name\": \"Saboor\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/users/1"
+					},
+					"response": []
+				},
+				{
+					"name": "User - Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/users/12"
+					},
+					"response": []
+				},
+				{
+					"name": "User - List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/laravel-project-management/api/users?filters[first_name]=Muhammad",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"laravel-project-management",
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "filters[first_name]",
+									"value": "Muhammad"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User - Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Abdul\",\n    \"last_name\": \"Saboor\",\n    \"email\": \"link2saboor@gmail.com\",\n    \"password\": \"87654321\",\n    \"password_confirmation\": \"87654321\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "User - Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Abeerah\",\n    \"last_name\": \"Fatima\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/users/12"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Project - Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Abdul\",\n    \"last_name\": \"Saboor\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/projects/19"
+					},
+					"response": []
+				},
+				{
+					"name": "Project - Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/projects/12"
+					},
+					"response": []
+				},
+				{
+					"name": "Projects - List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/laravel-project-management/api/projects?filters[name]=Cruise Booking App",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"laravel-project-management",
+								"api",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "filters[name]",
+									"value": "Cruise Booking App"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Projects - List More filters",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/laravel-project-management/api/projects?filters[start_date]= >:2024-01-01&filters[end_date]= <:2024-12-31",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"laravel-project-management",
+								"api",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "filters[start_date]",
+									"value": " >:2024-01-01"
+								},
+								{
+									"key": "filters[end_date]",
+									"value": " <:2024-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project - Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Cruise Booking App\",\n    \"status\": \"active\",\n    \"attributes\": [\n        {\n            \"attribute_id\": 1,\n            \"value\": \"Travel\"\n        },\n        {\n            \"attribute_id\": 2,\n            \"value\": \"2024-01-15\"\n        },\n        {\n            \"attribute_id\": 3,\n            \"value\": \"2024-08-20\"\n        },\n        {\n            \"attribute_id\": 4,\n            \"value\": \"High\"\n        },\n        {\n            \"attribute_id\": 5,\n            \"value\": \"50000\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/projects"
+					},
+					"response": []
+				},
+				{
+					"name": "Project - Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Cruise Booking App\",\n    \"status\": \"active\",\n    \"attributes\": [\n        {\n            \"attribute_id\": 1,\n            \"value\": \"Travel\"\n        },\n        {\n            \"attribute_id\": 2,\n            \"value\": \"2024-01-15\"\n        },\n        {\n            \"attribute_id\": 3,\n            \"value\": \"2024-08-10\"\n        },\n        {\n            \"attribute_id\": 4,\n            \"value\": \"High\"\n        },\n        {\n            \"attribute_id\": 5,\n            \"value\": \"80000\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/projects/19"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Timesheet",
+			"item": [
+				{
+					"name": "Timesheet - Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"task_name\": \"Developer Testing\",\n    \"date\": \"2025-03-10\",\n    \"hours\": 4,\n    \"project_id\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/timesheet"
+					},
+					"response": []
+				},
+				{
+					"name": "Timesheet - Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"task_name\": \"Developer Testing\",\n    \"date\": \"2025-03-10\",\n    \"hours\": 8,\n    \"project_id\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/timesheet/65"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attribute",
+			"item": [
+				{
+					"name": "Attribute - Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Abdul\",\n    \"last_name\": \"Saboor\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/attribute/6"
+					},
+					"response": []
+				},
+				{
+					"name": "Attribute - Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/attribute/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Attribute - List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/laravel-project-management/api/attribute?filters[name]=start_date",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"laravel-project-management",
+								"api",
+								"attribute"
+							],
+							"query": [
+								{
+									"key": "filters[name]",
+									"value": "start_date"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attribute - Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Total Employee\",\n    \"type\": \"number\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/attribute"
+					},
+					"response": []
+				},
+				{
+					"name": "Attribute - Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Total Employee\",\n    \"type\": \"number\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/attribute/6"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attribute Value",
+			"item": [
+				{
+					"name": "Attribute Value - Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Abdul\",\n    \"last_name\": \"Saboor\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/attribute-value/6"
+					},
+					"response": []
+				},
+				{
+					"name": "Attribute - Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/attribute-value/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Attribute Value - List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/laravel-project-management/api/attribute-value?filters[value]=vitae",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"laravel-project-management",
+								"api",
+								"attribute-value"
+							],
+							"query": [
+								{
+									"key": "filters[value]",
+									"value": "vitae"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attribute Value - Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Total Employee\",\n    \"type\": \"number\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/attribute"
+					},
+					"response": []
+				},
+				{
+					"name": "Attribute Value - Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"attribute_id\": 4,\n    \"entity_id\": 19,\n    \"value\": \"Low\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost/laravel-project-management/api/attribute-value/96"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Muhammad\",\n    \"last_name\": \"Ismail\",\n    \"email\": \"link2ismail@gmail.com\",\n    \"password\": \"87654321\",\n    \"password_confirmation\": \"87654321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost/laravel-project-management/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"link2ismail@gmail.com\",\n    \"password\": \"87654321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost/laravel-project-management/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{bearer_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "localhost/laravel-project-management/api/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "User - projects",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{bearer_token}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost/laravel-project-management/api/user/4/projects"
+			},
+			"response": []
+		},
+		{
+			"name": "User - Timesheets",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{bearer_token}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost/laravel-project-management/api/user/4/timesheets"
+			},
+			"response": []
+		}
+	]
+}
